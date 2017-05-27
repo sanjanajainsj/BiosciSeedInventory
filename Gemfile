@@ -18,7 +18,6 @@ gem 'therubyracer', platforms: :ruby
 gem 'sequel'
 gem 'mysql'
 gem 'mysql2'
-gem 'sqlite3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gid:</strong>
+  <%= @inventory.gid %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @inventory.location %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @inventory.room %>
+</p>
+
+<p>
+  <strong>Row:</strong>
+  <%= @inventory.row %>
+</p>
+
+<p>
+  <strong>Shelf:</strong>
+  <%= @inventory.shelf %>
+</p>
+
+<p>
+  <strong>Box:</strong>
+  <%= @inventory.box %>
+</p>
+
+<p>
+  <strong>Stockid:</strong>
+  <%= @inventory.stockid %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @inventory.source %>
+</p>
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

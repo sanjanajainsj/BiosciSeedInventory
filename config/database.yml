@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: sims_production
-  username: sims
-  password: <%= ENV['SIMS_DATABASE_PASSWORD'] %>
+#  username: sims
+#  password: <%= ENV['SIMS_DATABASE_PASSWORD'] %>

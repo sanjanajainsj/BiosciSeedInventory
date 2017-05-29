@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
-<%=@val%>
+
 <h1>Inventories</h1>
-<div style= float:right>
+
   <%= form_tag inventories_path, :method => "get" do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag("Search") %>
   <%end%>
-</div>
+
 <table border="1">
   <thead>
     <tr>
-      <th>Gid</th>
+      <th>GID</th>
       <th>Location</th>
       <th>Room</th>
       <th>Row</th>
@@ -31,7 +31,7 @@
         <td><%= inventory.row %></td>
         <td><%= inventory.shelf %></td>
         <td><%= inventory.box %></td>
-        <td><%= inventory.stockID %></td>
+        <td><%= inventory.stockid %></td>
         <td><%= inventory.source %></td>
         <td><%= link_to 'Show', inventory %></td>
         <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>

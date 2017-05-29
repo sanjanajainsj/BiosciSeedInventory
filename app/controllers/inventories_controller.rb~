@@ -5,12 +5,12 @@ class InventoriesController < ApplicationController
   # GET /inventories.json
   def index
     #require "rubygems"
-    require "sequel"
+    #require "sequel"
     #DB = Sequel.sqlite
-    require 'sqlite3'
-    #@val = Sequel.sqlite(:adapter => 'mysql', :host => 'https://bioscii.000webhostapp.com/', :database=>'id570353_bioscii', :user => 'id570353_bioscii', :password => 'bioscii')
-    @val = Sequel.sqlite('id570353_bioscii',:host => 'https://bioscii.000webhostapp.com/', :user => 'id570353_bioscii', :password => 'bioscii')
-    @vall = @val['SELECT * FROM test']
+    #require 'sqlite3'
+    #@val = Sequel.connect(:adapter => 'mysql', :host => 'https://bioscii.000webhostapp.com/', :database=>'id570353_bioscii', :user => 'id570353_bioscii', :password => 'bioscii')
+    #@val = Sequel.sqlite('id570353_bioscii',:host => 'https://bioscii.000webhostapp.com/', :user => 'id570353_bioscii', :password => 'bioscii')
+    #@vall = @val['SELECT * FROM test']
     
     #Sequel.sqlite('sims_test')
     if params[:search]

@@ -78,14 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-
-
-
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  username: id570353_biosci
-  password: bioscii
-  host: https://bioscii.000webhostapp.com/
-  database: id570353_biosci
+  <<: *default
+  database: sims_production
+  username: sims
+  password: <%= ENV['SIMS_DATABASE_PASSWORD'] %>

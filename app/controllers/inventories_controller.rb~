@@ -14,9 +14,10 @@ class InventoriesController < ApplicationController
     
     #Sequel.sqlite('sims_test')
     if params[:search]
-      searchQuery = params[:search]
+      @searchQuery = params[:search]
       @inventories = Inventory.all.where("gid = :gid", {gid: searchQuery})
     else
+      @searchQuery = "ANY"
       @inventories = Inventory.all
     end
   end

@@ -6,6 +6,7 @@
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag("Search") %>
   <%end%>
+<br>
 
 <table border="1">
   <thead>
@@ -23,6 +24,9 @@
   </thead>
 
   <tbody>
+    <% if @inventories.length==0 %>
+	<tr><td colspan="11">NO RECORDS FOUND FOR <%= @searchQuary %>!!!</td></tr>
+    <% else %>
     <% @inventories.each do |inventory| %>
       <tr>
         <td><%= inventory.gid %></td>
@@ -37,6 +41,7 @@
         <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
         <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>

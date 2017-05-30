@@ -13,13 +13,18 @@ class InventoriesController < ApplicationController
     #@vall = @val['SELECT * FROM test']
     
     #Sequel.sqlite('sims_test')
-    if params[:search]
+
       @searchQuery = params[:search]
-      @inventories = Inventory.all.where("gid = :gid", {gid: searchQuery})
-    else
+	if /\d+/=~ @searchQuery
+      @inventories = Inventory.all.where("gid = :gid", {gid: @searchQuery})
+	
+    elsif !params[:search]
       @searchQuery = "ANY"
       @inventories = Inventory.all
+    else
+      @inventories=Inventory.all.where("gid = -1")
     end
+
   end
 
   # GET /inventories/1
